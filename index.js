@@ -14,9 +14,6 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
-app.get("/", (req, res) => {
-  res.send("Hello, express server")
-})
 
 async function createMovie(newMovie){
  try{
@@ -37,7 +34,7 @@ app.post("/movies" , async (req, res) => {
   }
 })
 
-
+// createMovie(newMovie)
 
 // find a movie with a particular title
 
@@ -50,7 +47,7 @@ async function readMovieByTitle(movieTitle){
   }
 } 
 
-
+// readMovieByTitle("Lagaan")
 
 app.get("/movies/:title", async (req, res) => {
   try{
@@ -76,7 +73,7 @@ async function readAllMovies(){
   }
 }
 
-
+// readAllMovies()
 
 app.get("/movies", async (req, res) => {
   try{
@@ -115,7 +112,7 @@ app.get("/movies/director/:directorName" , async (req, res) => {
   }
 } )
 
-
+// readMoviesByDirector("Kabir Khan")
 
 async function readMoviesByGenre(movieGenre){
   try{
