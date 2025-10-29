@@ -14,6 +14,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get("/", (req, res) => {
+  res.send("Hello, express server")
+})
+
 
 async function createMovie(newMovie){
  try{
